@@ -10,13 +10,8 @@ import itertools
 
 class Route:
 
-    def __init__(self):
-        # self.graph = [entry for entry in input("Enter a list of graph entries : ").split(',')]
-        pass
-
-    def _graph_input(self):
-        graph = [entry for entry in input("Enter a list of graph entries : ").split(',')]
-        return graph
+    def __init__(self, graph=input("Enter a list of graph entries : ")):
+        self.graph = [entry for entry in graph.split(',')]
 
     # dictionary of all feasible pair nodes and weights
     def _graph_dictionary(self, graph):
@@ -98,9 +93,11 @@ class Route:
         return length
 
     # function that outputs for standard route route
+    # params: 
+    #       route: e.g "B-B"    
     def findstandardpath(self, route=None):
         route = route or input("Enter a path to find: ")
-        graph = self._graph_input()
+        graph = self.graph
         route_list = route.split('-')
         distance = []
         dist_list = self._graph_dictionary(graph)
@@ -123,11 +120,16 @@ class Route:
         return print(length)
 
     # function that outputs trips through a certain path with maximum number of stops
-    def findtripstoandfroapath(self, route=None):
+    # params: 
+    #       route: e.g "B B"
+    #       maximum_stop: e.g 4
+    #       exact_number: e.g 3
+    #       N.B for func to work give either maximum_stop or exact_number a number > 0 and set the other to 0
+    def findtripstoandfroapath(self, route=None, maximum_stop=None, exact_number=None):
         route = route or input("Enter two paths: ")
-        graph = self._graph_input()
-        maximum_stop = int(input("Enter the maximum no. of stop: "))
-        exact_number = int(input("Enter the exact no. of stop: "))
+        graph = self.graph
+        maximum_stop = maximum_stop
+        exact_number = exact_number
 
         start_route = route.split()[0]
         end_route = route.split()[1]
@@ -167,9 +169,12 @@ class Route:
 
         return print(len(success))
 
+    # function that outputs the shortest distance between two paths
+    # params: 
+    #       route: e.g "B B"
     def findshortestpath(self, route=None):
         route = route or input("Enter a route to find the shortest path: ")
-        graph = self._graph_input()
+        graph = self.graph
         result, distances = [], []
 
         start_route, end_route = route.split()[0], route.split()[1]
@@ -195,9 +200,13 @@ class Route:
         minimum = min(distances)
         return print(minimum)
 
+    # function that outputs different paths under a given distance
+    # params: 
+    #       route: e.g "C C"
+    #       maximum_length: e.g "30"
     def finddifferentpaths(self, route=None, maximum_length=None):
         route = route or input("Enter a route to find the shortest path: ")
-        graph = self._graph_input()
+        graph = self.graph
         maximum_length = maximum_length or input("Enter distance to be less than: ")
         result, distances = [], []
 
