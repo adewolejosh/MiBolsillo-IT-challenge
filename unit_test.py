@@ -10,7 +10,7 @@ import unittest
 from route import Route
 
 
-class TestStringMethods(unittest.TestCase):
+class TestFunctionMethods(unittest.TestCase):
 
 
     def test_findstandardpath(self):
@@ -34,6 +34,7 @@ class TestStringMethods(unittest.TestCase):
     def test_finddifferentpaths(self):
         t = Route("AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7")
         self.assertEqual(t.finddifferentpaths("C C", 30), 7)
+
 
 if __name__ == '__main__':
     unittest.main()

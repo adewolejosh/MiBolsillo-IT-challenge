@@ -7,8 +7,10 @@ from route import Route
 
 
 def maintest():
-    # t = Route("AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7")
     t = Route()
+    ##############################################################
+    # My TEST
+    # t = Route("AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7")
     t.findstandardpath("A-B-C")
     t.findstandardpath("A-D")
     t.findstandardpath("A-D-C")
@@ -19,6 +21,8 @@ def maintest():
     t.findshortestpath("A C")
     t.findshortestpath("B B")
     t.finddifferentpaths("C C", 30)
+    #############################################################
+    # Your test
 
 
 if __name__ == '__main__':

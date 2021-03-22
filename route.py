@@ -1,3 +1,4 @@
+
 """
 
 N.B 
@@ -179,7 +180,6 @@ class Route:
 
         start_route, end_route = route.split()[0], route.split()[1]
         list_of_cities = self._city(graph)
-        pair_city = self._city_list(graph)
         join_together = ''.join(list_of_cities)
 
         for i in range(len(list_of_cities)):
