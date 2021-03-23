@@ -53,4 +53,4 @@ Special Thanks to Julio and the team at MiBolsillo for this challenge!
 
 #### Unofficial and Kind of Unrelated Block: Should/Could be Ignored!!!
 
-After consulting some research, I found out quite a number of folks consider each node(path) in each process and for me, I was like why do you consider a node why not the path way, this kind of added to my thought process when writing each block and I really hope this helps someone out there one day but until(and after) then, Love and Light! :)
+After conducting some research, I found out to tackle a similar problem, quite a number of folks consider each node(path) in each process and for me, I said to myself; "why do you consider a node why not the path way", this kind of added to my thought process when writing each block and I really hope this helps someone out there one day but until(and after) then, Love and Light! :)
